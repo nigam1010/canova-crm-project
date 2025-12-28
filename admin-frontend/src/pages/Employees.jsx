@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { userAPI } from '../services/api';
-import { search, editIcon, deleteIcon } from '../assets';
+import { search, editIcon, deleteIcon } from '../assets/index.js';
 import './Employees.css';
 
 const Employees = () => {

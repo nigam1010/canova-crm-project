@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { leadAPI, userAPI } from '../services/api';
-import { search, upload } from '../assets';
+import { search, upload } from '../assets/index.js';
 import './Leads.css';
 
 const Leads = () => {

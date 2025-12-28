@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { dashboardAPI, activityAPI } from '../services/api';
-import { search, unassignedLeads, assignedLeads, activeSales, conversionRate } from '../assets';
+import { search, unassignedLeads, assignedLeads, activeSales, conversionRate } from '../assets/index.js';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,

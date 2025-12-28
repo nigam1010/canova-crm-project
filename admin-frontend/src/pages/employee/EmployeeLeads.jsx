@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { leadAPI } from '../../services/api';
-import { employeeSearch, calendarEmp, type, schedule, status } from '../../assets';
+import { employeeSearch, calendarEmp, type, schedule, status } from '../../assets/index.js';
 import './EmployeeLeads.css';
 
 const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';

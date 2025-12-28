@@ -5,7 +5,7 @@ import EmployeeHome from './EmployeeHome';
 import EmployeeLeads from './EmployeeLeads';
 import EmployeeSchedule from './EmployeeSchedule';
 import EmployeeProfile from './EmployeeProfile';
-import { home, leads, calendar, profile } from '../../assets';
+import { home, leads, calendar, profile } from '../../assets/index.js';
 import './EmployeeLayout.css';
 
 const EmployeeLayout = () => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { employeeSearch, filter, ping, profile } from '../../assets';
+import { employeeSearch, filter, ping, profile } from '../../assets/index.js';
 import './EmployeeSchedule.css';
 
 const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
