@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { employeeSearch, filter, ping, profile } from '../../assets/index.js';
+import employeeSearchIcon from '../../assets/employee_search.svg?url';
+import filterIcon from '../../assets/filter.svg?url';
+import pingIcon from '../../assets/ping.svg?url';
+import profileIcon from '../../assets/profile.svg?url';
 import './EmployeeSchedule.css';
 
 const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 const EmployeeSchedule = ({ onBack }) => {
   const [schedules, setSchedules] = useState([]);
-  const [filter, setFilter] = useState('All');
+  const [filterValue, setFilterValue] = useState('All');
   const [showFilter, setShowFilter] = useState(false);
 
   useEffect(() => {
     fetchSchedules();
-  }, [filter]);
+  }, [filterValue]);
 
   const fetchSchedules = async () => {
     try {
-      const response = await fetch(`${API_URL}/leads/scheduled?filter=${filter}`, {
+      const response = await fetch(`${API_URL}/leads/scheduled?filter=${filterValue}`, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
@@ -46,18 +49,18 @@ const EmployeeSchedule = ({ onBack }) => {
       <div className="employee-content">
         <div className="schedule-header-mobile">
           <div className="search-bar-mobile">
-            <img src={employeeSearch} alt="Search" className="search-icon-mobile" />
+            <img src={employeeSearchIcon} alt="Search" className="search-icon-mobile" />
             <input type="text" placeholder="Search" />
           </div>
           <button className="filter-btn-mobile" onClick={() => setShowFilter(!showFilter)}>
-            <img src={filter} alt="Filter" />
+            <img src={filterIcon} alt="Filter" />
           </button>
         </div>
 
         {showFilter && (
           <div className="filter-modal">
             <div className="filter-title">Filter</div>
-            <select value={filter} onChange={(e) => { setFilter(e.target.value); setShowFilter(false); }}>
+            <select value={filterValue} onChange={(e) => { setFilterValue(e.target.value); setShowFilter(false); }}>
               <option value="Today">Today</option>
               <option value="All">All</option>
             </select>
@@ -82,11 +85,11 @@ const EmployeeSchedule = ({ onBack }) => {
 
               <div className="schedule-info">
                 <div className="schedule-info-row">
-                  <img src={ping} alt="Type" className="schedule-icon" />
+                  <img src={pingIcon} alt="Type" className="schedule-icon" />
                   <span>{schedule.type || 'Call'}</span>
                 </div>
                 <div className="schedule-info-row">
-                  <img src={profile} alt="Person" className="schedule-icon" />
+                  <img src={profileIcon} alt="Person" className="schedule-icon" />
                   <span>{schedule.name}</span>
                 </div>
               </div>
