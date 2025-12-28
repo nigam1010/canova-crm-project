@@ -11,7 +11,7 @@ This is a single React application that shows different interfaces based on user
 - Email: admin@canovacrm.com
 - Password: admin@canovacrm.com
 - **Employee** → Mobile-optimized interface (max 430px width)
-- Use any created employee email (In admin interface choose any user email Id)
+- Email: Use any created employee email (In admin interface choose any user email Id and logout using logout button in the bottom of sidebar)
 - Password: same as email (default)
 - → Shows mobile interface
 
