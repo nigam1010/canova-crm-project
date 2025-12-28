@@ -1,0 +1,638 @@
+/* ================= EMPLOYEES PAGE ================= */
+.employees-page {
+  padding: 2px 0px 2px 0px;
+  background: #FFFFFF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search Section - Scoped */
+.employees-page .search-section {
+  background: white;
+  padding: 18px 28px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.employees-page .search-box {
+  position: relative;
+  max-width: 300px;
+}
+
+.employees-page .search-box input {
+  padding: 8px 15px 10px 42px;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  width: 280px;
+  height: 38px;
+  font-size: 14px;
+  background: #ECECEC;
+  background-image: none !important;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.employees-page .search-box input::placeholder {
+  color: #555555;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.employees-page .search-box input:focus {
+  outline: none;
+  background: #E0E0E0;
+}
+
+.employees-page .search-box img {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+.employees-page .employees-table-container {
+  background: #ffffff;
+  border: 1px solid #E4E7EC;
+  border-radius: 12px;
+  margin: 0 20px 16px;
+  padding: 0px 0;
+  overflow-x: auto;
+}
+
+.employees-page .page-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 30px;
+  /* Match Leads padding */
+  transform: translateY(-42px);
+  margin-bottom: -24px;
+}
+
+.employees-page .btn-primary {
+  padding: 10px 22px;
+  background: #D9D9D9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #636060;
+  border: none;
+  cursor: pointer;
+}
+
+
+.employees-page .btn-primary:hover {
+  background-color: #D0D0D0;
+}
+
+/* ================= TABLE BASE ================= */
+
+.employees-page .employees-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* ================= HEADER ================= */
+
+.employees-page .employees-table thead th {
+  background: #FCFCFD;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475467;
+  text-align: left;
+  border-bottom: 1px solid #E4E7EC;
+  white-space: nowrap;
+}
+
+.employees-page .employees-table thead th:first-child,
+.employees-page .employees-table thead th:last-child {
+  border-radius: 0;
+}
+
+/* ================= ROWS ================= */
+
+.employees-page .employees-table tbody tr {
+  background: #FFFFFF;
+  transition: background 0.15s ease;
+}
+
+.employees-page .employees-table tbody tr:hover {
+  background: #F9FAFB;
+}
+
+.employees-page .employees-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #F2F4F7;
+}
+
+/* ================= CELLS ================= */
+
+.employees-page .employees-table td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #1E293B;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: transparent;
+}
+
+/* Checkbox column */
+.employees-page .employees-table th:nth-child(1),
+.employees-page .employees-table td:nth-child(1) {
+  width: 40px;
+  text-align: center;
+  padding-right: 0;
+}
+
+.employees-page .employees-table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Centered columns */
+.employees-page .employees-table th:nth-child(3),
+.employees-page .employees-table td:nth-child(3),
+.employees-page .employees-table th:nth-child(4),
+.employees-page .employees-table td:nth-child(4),
+.employees-page .employees-table th:nth-child(5),
+.employees-page .employees-table td:nth-child(5),
+.employees-page .employees-table th:nth-child(6),
+.employees-page .employees-table td:nth-child(6) {
+  text-align: center;
+}
+
+/* Actions column */
+.employees-page .employees-table th:last-child,
+.employees-page .employees-table td:last-child {
+  text-align: right;
+  padding-right: 24px;
+}
+
+/* ================= EMPLOYEE INFO ================= */
+
+.employees-page .employee-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employees-page .employee-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFF2EA;
+  color: #93312B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.employees-page .employee-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+  line-height: 18px;
+}
+
+.employees-page .employee-email {
+  font-size: 12px;
+  color: #667085;
+  line-height: 16px;
+}
+
+/* ================= ID BADGE ================= */
+
+.employees-page .id-badge {
+  background: #F2F4F7;
+  color: #344054;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* ================= STATUS BADGES ================= */
+/* Already has .employees-page scoping in original file, keeping it */
+
+.employees-page .status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px !important;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.employees-page .status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px !important;
+}
+
+.employees-page .status-badge.active,
+.employees-page .status-badge.checked-in {
+  background: #ECFDF3;
+  color: #027A48;
+}
+
+.employees-page .status-badge.active .status-dot,
+.employees-page .status-badge.checked-in .status-dot {
+  background: #12B76A;
+}
+
+.employees-page .status-badge.inactive,
+.employees-page .status-badge.not-checked-in {
+  background: #FFF2EA;
+  color: #F15046;
+}
+
+.employees-page .status-badge.inactive .status-dot,
+.employees-page .status-badge.not-checked-in .status-dot {
+  background: #F15046;
+}
+
+.employees-page .status-badge.on-break {
+  color: #D97706;
+  background: #FEF3C7;
+}
+
+.employees-page .status-badge.on-break .status-dot {
+  background: #D97706;
+}
+
+.employees-page .status-badge.checked-out {
+  color: #4B5563;
+  background: #F3F4F6;
+}
+
+.employees-page .status-badge.checked-out .status-dot {
+  background: #6B7280;
+}
+
+/* ================= ACTIONS MENU ================= */
+.employees-page .actions-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.employees-page .btn-menu {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #667085;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.employees-page .dropdown-menu {
+  position: absolute;
+  right: 14px;
+  top: 40%;
+  background: white;
+  border: 1px solid #E4E7EC;
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08);
+  border-radius: 8px;
+  padding: 4px;
+  z-index: 50;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employees-page .dropdown-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: white;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #344054;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.employees-page .dropdown-menu button:hover {
+  background: #F9FAFB;
+}
+
+.employees-page .dropdown-menu .icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+/* ================= PAGINATION ================= */
+
+.employees-page .pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px 40px;
+  padding: 0 10px;
+}
+
+.employees-page .pagination-btn {
+  background: white;
+  border: 1px solid #E2E8F0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.employees-page .pagination-btn:hover:not(:disabled) {
+  background: #F1F5F9;
+}
+
+.employees-page .pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.employees-page .pagination-center {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.employees-page .pagination-number {
+  background: white;
+  border: 1px solid #E2E8F0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 36px;
+  text-align: center;
+}
+
+.employees-page .pagination-number:hover {
+  background: #F1F5F9;
+}
+
+.employees-page .pagination-number.active {
+  background: #EFF1F4;
+  border-color: #EFF1F4;
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.employees-page .pagination-dots {
+  color: #9CA3AF;
+  padding: 0 4px;
+}
+
+/* ================= MODAL ================= */
+/* IMPORTANT: Modal overlay might be parallel to content but inside the page div. */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+/* Scoped Modal Content for Employees */
+.modal-content.employee-modal {
+  background: white;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1200px;
+  min-height: 60vh;
+  margin-left: 10%;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: modalSlideIn 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #6B7280;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.close-btn:hover {
+  background: #F3F4F6;
+  color: #111827;
+}
+
+/* ================= FORMS ================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Tooltip Styling */
+.label-with-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+  cursor: help;
+}
+
+.info-icon {
+  font-size: 12px;
+  color: #9CA3AF;
+  border: 1px solid #9CA3AF;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #ffffff;
+  color: #374151;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E5E7EB;
+  font-size: 12px;
+  font-weight: normal;
+  pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #111827;
+  transition: all 0.15s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2051E5;
+  box-shadow: 0 0 0 3px rgba(32, 81, 229, 0.1);
+}
+
+.form-group input:disabled {
+  background-color: #F3F4F6;
+  color: #6B7280;
+}
+
+/* Modal Footer & Buttons */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.btn-save {
+  background: #D1D5DB;
+  color: #374151;
+  border: none;
+  padding: 8px 32px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-save:hover {
+  background: #9CA3AF;
+}
+
+/* ================= CONFIRM MODAL ================= */
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 8px 10px;
+  background: #EF4444;
+  border: 1px solid #EF4444;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.btn-cancel:hover {
+  background: #F9FAFB;
+}
+
+.btn-delete:hover {
+  background: #DC2626;
+}

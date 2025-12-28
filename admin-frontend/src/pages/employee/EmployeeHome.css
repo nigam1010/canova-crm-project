@@ -1,0 +1,286 @@
+.employee-home {
+  min-height: 100vh;
+  background: #ffffff;
+  max-width: 430px;
+  margin: 0 auto;
+  color: #0f172a;
+}
+
+/* Header */
+.employee-header {
+  position: relative;
+  background: #2051E5;
+  color: #ffffff;
+  padding: 20px 20px 28px;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  min-height: 16vh;
+}
+
+/* Circle 1 - Large outer circle */
+.employee-header::before {
+  content: '';
+  position: absolute;
+  bottom: 70px;
+  right: 230px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #2051E5 0%, #DEE6FF 100%);
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Circle 2 - Smaller inner circle */
+.employee-header::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: 330px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #2051E5 0%, #DEE6FF 100%);
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+
+.header-logo {
+  font-size: 16px;
+  font-weight: 650;
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-logo span {
+  color: #FFD700;
+}
+
+.header-greeting {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-name {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content */
+.employee-content {
+  padding: 20px 16px 100px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+/* Timings Section */
+.timings-section {
+  margin-bottom: 24px;
+}
+
+/* Break Container - wraps break card and logs together */
+.break-container {
+  background: #E4E8F2;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 2px solid #c7d2e8;
+}
+
+.timing-card {
+  background: #2051E5;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* Break header inside container - full rounded corners */
+.timing-card.break-header {
+  margin-bottom: 8px;
+  border-radius: 12px;
+}
+
+.timing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.timing-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 80px;
+}
+
+.timing-label {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.timing-value {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Timing Indicator Button - oval shaped clickable button */
+.timing-indicator-btn {
+  width: 12px;
+  height: 40px;
+  border-radius: 8px;
+  background: #E4E4E4;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.timing-indicator-btn:hover:not(:disabled) {
+  background: #919191;
+  transform: scale(1.05);
+}
+
+.timing-indicator-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.timing-indicator-btn.checked-in {
+  background: #FFD700;
+}
+
+.timing-indicator-btn.completed {
+  background: #00C853;
+}
+
+.timing-indicator-btn.on-break {
+  background: #FF6B35;
+}
+
+.timing-indicator-btn.btn-green {
+  background: #00C853;
+  color: white;
+  /* Ensure visibility if needed, though buttons are small ovals */
+}
+
+.timing-indicator-btn.btn-red {
+  background: #ef4444;
+}
+
+.timing-indicator-btn.btn-orange {
+  background: #f97316;
+}
+
+/* Remove old button styles - no longer needed */
+.timing-actions {
+  display: none;
+}
+
+.btn-checkin,
+.btn-checkout,
+.btn-break-start,
+.btn-break-end {
+  display: none;
+}
+
+/* Break Logs - inside break-container */
+.break-logs {
+  background: transparent;
+  border-radius: 0;
+  padding: 12px 16px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  transform: translateY(-20px);
+}
+
+.break-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.break-row:not(:last-child) {
+  border-bottom: none;
+}
+
+.break-row>div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.break-label {
+  color: #111827;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.break-time {
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Activity Section */
+.activity-section {
+  background: transparent;
+  margin-top: 16px;
+}
+
+.activity-list {
+  background: #E9E9E9;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+  color: #374151;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.activity-item:first-child {
+  padding-top: 0;
+}
+
+.activity-item:last-child {
+  padding-bottom: 0;
+}
+
+.activity-bullet {
+  color: #111827;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.activity-time {
+  color: #6B7280;
+  font-size: 11px;
+  margin-left: 4px;
+}

@@ -1,0 +1,100 @@
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 15%;
+  min-width: 200px;
+  max-width: 260px;
+  background-color: #D9D9D9;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  padding: 10px 20px 20px;
+  background: #D9D9D9;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.logo h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+  font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: -0.3px;
+}
+
+.logo span {
+  color: #0000FF;
+}
+
+/* ===== NAV MENU ===== */
+.sidebar .nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 14px;
+}
+
+/* ===== NAV ITEM ===== */
+.sidebar .nav-item {
+  padding: 5px 10px;
+  position: relative;
+  gap: 0px;
+  transform: translateY(-10px);
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A1A;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  background: transparent;
+  transition: background-color 0.15s ease;
+}
+
+/* ===== HOVER ===== */
+.sidebar .nav-item:hover {
+  background-color: #C8C8C8;
+}
+
+/* ===== ACTIVE ===== */
+.sidebar .nav-item.active {
+  background-color: #A7A7A7;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout-btn {
+  margin: auto 20px 20px;
+  padding: 10px 16px;
+  background-color: #A7A7A7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #767676;
+}
