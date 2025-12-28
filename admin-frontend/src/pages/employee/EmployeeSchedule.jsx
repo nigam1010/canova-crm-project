@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { employeeSearch, filter, ping, profile } from '../../assets';
 import './EmployeeSchedule.css';
 
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+
 const EmployeeSchedule = ({ onBack }) => {
   const [schedules, setSchedules] = useState([]);
   const [filter, setFilter] = useState('All');
@@ -13,7 +15,7 @@ const EmployeeSchedule = ({ onBack }) => {
 
   const fetchSchedules = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/leads/scheduled?filter=${filter}`, {
+      const response = await fetch(`${API_URL}/leads/scheduled?filter=${filter}`, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import './EmployeeProfile.css';
 
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+
 const EmployeeProfile = ({ onBack }) => {
   const { user, logout } = useAuth();
   const [formData, setFormData] = useState({
@@ -30,7 +32,7 @@ const EmployeeProfile = ({ onBack }) => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/users/${user._id}`, {
+      const response = await fetch(`${API_URL}/users/${user._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

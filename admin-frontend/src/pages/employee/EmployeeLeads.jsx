@@ -3,6 +3,8 @@ import { leadAPI } from '../../services/api';
 import { employeeSearch, calendarEmp, type, schedule, status } from '../../assets';
 import './EmployeeLeads.css';
 
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+
 const EmployeeLeads = ({ onBack }) => {
   const [leads, setLeads] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +20,7 @@ const EmployeeLeads = ({ onBack }) => {
 
   const fetchLeads = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/leads/my-leads', {
+      const response = await fetch(`${API_URL}/leads/my-leads`, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
@@ -75,7 +77,7 @@ const EmployeeLeads = ({ onBack }) => {
 
   const updateType = async (type) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/leads/${selectedLead._id}`, {
+      const response = await fetch(`${API_URL}/leads/${selectedLead._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -94,7 +96,7 @@ const EmployeeLeads = ({ onBack }) => {
 
   const updateSchedule = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/leads/${selectedLead._id}`, {
+      const response = await fetch(`${API_URL}/leads/${selectedLead._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +118,7 @@ const EmployeeLeads = ({ onBack }) => {
 
   const updateStatus = async (status) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/leads/${selectedLead._id}`, {
+      const response = await fetch(`${API_URL}/leads/${selectedLead._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

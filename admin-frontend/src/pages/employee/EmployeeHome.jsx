@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import './EmployeeHome.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 const EmployeeHome = () => {
   const { user } = useAuth();
