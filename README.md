@@ -1,7 +1,7 @@
 # CanovaCRM 
 ## Deployment links: 
-# Frontend - Vercel (Unified): https://canova-crm-project.vercel.app
-# Backend - Render : https://canova-crm-project-backend.onrender.com (https://canova-crm-project-backend.onrender.com/api/health)
+  Frontend - Vercel (Unified): https://canova-crm-project.vercel.app
+  Backend - Render : https://canova-crm-project-backend.onrender.com (https://canova-crm-project-backend.onrender.com/api/health)
 
 ## ✅ ONE UNIFIED APPLICATION
 Note to Evaluator:
