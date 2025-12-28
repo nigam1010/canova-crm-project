@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { leadAPI } from '../../services/api';
+import { employeeSearch, calendarEmp, type, schedule, status } from '../../assets';
 import './EmployeeLeads.css';
 
 const EmployeeLeads = ({ onBack }) => {
@@ -143,7 +144,7 @@ const EmployeeLeads = ({ onBack }) => {
 
       <div className="employee-content">
         <div className="search-bar-mobile">
-          <img src="/src/assets/employee_search.svg" alt="Search" className="search-icon-mobile" />
+          <img src={employeeSearch} alt="Search" className="search-icon-mobile" />
           <input
             type="text"
             placeholder="Search"
@@ -174,18 +175,18 @@ const EmployeeLeads = ({ onBack }) => {
 
               <div className="lead-footer-mobile">
                 <div className="lead-date-mobile">
-                  <img src="/src/assets/calendar-emp.svg" alt="Date" />
+                  <img src={calendarEmp} alt="Date" />
                   <span>{formatDate(lead.date)}</span>
                 </div>
                 <div className="lead-actions-mobile">
                   <button className="action-btn-circle" onClick={() => handleTypeClick(lead)}>
-                    <img src="/src/assets/type.svg" alt="Type" />
+                    <img src={type} alt="Type" />
                   </button>
                   <button className="action-btn-circle" onClick={() => handleScheduleClick(lead)}>
-                    <img src="/src/assets/schedule.svg" alt="Schedule" />
+                    <img src={schedule} alt="Schedule" />
                   </button>
                   <button className="action-btn-circle" onClick={() => handleStatusClick(lead)}>
-                    <img src="/src/assets/status.svg" alt="Status" />
+                    <img src={status} alt="Status" />
                   </button>
                 </div>
               </div>

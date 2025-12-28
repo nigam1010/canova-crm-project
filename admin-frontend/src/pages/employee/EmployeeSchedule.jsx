@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { employeeSearch, filter, ping, profile } from '../../assets';
 import './EmployeeSchedule.css';
 
 const EmployeeSchedule = ({ onBack }) => {
@@ -43,11 +44,11 @@ const EmployeeSchedule = ({ onBack }) => {
       <div className="employee-content">
         <div className="schedule-header-mobile">
           <div className="search-bar-mobile">
-            <img src="/src/assets/employee_search.svg" alt="Search" className="search-icon-mobile" />
+            <img src={employeeSearch} alt="Search" className="search-icon-mobile" />
             <input type="text" placeholder="Search" />
           </div>
           <button className="filter-btn-mobile" onClick={() => setShowFilter(!showFilter)}>
-            <img src="/src/assets/filter.svg" alt="Filter" />
+            <img src={filter} alt="Filter" />
           </button>
         </div>
 
@@ -79,11 +80,11 @@ const EmployeeSchedule = ({ onBack }) => {
 
               <div className="schedule-info">
                 <div className="schedule-info-row">
-                  <img src="/src/assets/ping.svg" alt="Type" className="schedule-icon" />
+                  <img src={ping} alt="Type" className="schedule-icon" />
                   <span>{schedule.type || 'Call'}</span>
                 </div>
                 <div className="schedule-info-row">
-                  <img src="/src/assets/profile.svg" alt="Person" className="schedule-icon" />
+                  <img src={profile} alt="Person" className="schedule-icon" />
                   <span>{schedule.name}</span>
                 </div>
               </div>

@@ -5,6 +5,7 @@ import EmployeeHome from './EmployeeHome';
 import EmployeeLeads from './EmployeeLeads';
 import EmployeeSchedule from './EmployeeSchedule';
 import EmployeeProfile from './EmployeeProfile';
+import { home, leads, calendar, profile } from '../../assets';
 import './EmployeeLayout.css';
 
 const EmployeeLayout = () => {
@@ -33,28 +34,28 @@ const EmployeeLayout = () => {
           className={`nav-item ${activePage === 'home' ? 'active' : ''}`}
           onClick={() => setActivePage('home')}
         >
-          <img src="/src/assets/home.svg" alt="Home" className="nav-icon" />
+          <img src={home} alt="Home" className="nav-icon" />
           <div className="nav-label">Home</div>
         </button>
         <button
           className={`nav-item ${activePage === 'leads' ? 'active' : ''}`}
           onClick={() => setActivePage('leads')}
         >
-          <img src="/src/assets/leads.svg" alt="Leads" className="nav-icon" />
+          <img src={leads} alt="Leads" className="nav-icon" />
           <div className="nav-label">Leads</div>
         </button>
         <button
           className={`nav-item ${activePage === 'schedule' ? 'active' : ''}`}
           onClick={() => setActivePage('schedule')}
         >
-          <img src="/src/assets/calendar.svg" alt="Schedule" className="nav-icon" />
+          <img src={calendar} alt="Schedule" className="nav-icon" />
           <div className="nav-label">Schedule</div>
         </button>
         <button
           className={`nav-item ${activePage === 'profile' ? 'active' : ''}`}
           onClick={() => setActivePage('profile')}
         >
-          <img src="/src/assets/profile.svg" alt="Profile" className="nav-icon" />
+          <img src={profile} alt="Profile" className="nav-icon" />
           <div className="nav-label">Profile</div>
         </button>
       </div>

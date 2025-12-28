@@ -1,0 +1,20 @@
+// Export all SVG assets
+export { default as activeSales } from './activesales.svg';
+export { default as assignedLeads } from './assignedleads.svg';
+export { default as calendarEmp } from './calendar-emp.svg';
+export { default as calendar } from './calendar.svg';
+export { default as conversionRate } from './conversionrate.svg';
+export { default as deleteIcon } from './delete.svg';
+export { default as editIcon } from './edit.svg';
+export { default as employeeSearch } from './employee_search.svg';
+export { default as filter } from './filter.svg';
+export { default as home } from './home.svg';
+export { default as leads } from './leads.svg';
+export { default as ping } from './ping.svg';
+export { default as profile } from './profile.svg';
+export { default as schedule } from './schedule.svg';
+export { default as search } from './search.svg';
+export { default as status } from './status.svg';
+export { default as type } from './type.svg';
+export { default as unassignedLeads } from './unassignedleads.svg';
+export { default as upload } from './upload.svg';

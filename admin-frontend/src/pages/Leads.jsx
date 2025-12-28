@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { leadAPI, userAPI } from '../services/api';
+import { search, upload } from '../assets';
 import './Leads.css';
 
 const Leads = () => {
@@ -153,7 +154,7 @@ const Leads = () => {
     <div className="leads-page">
       <div className="search-section">
         <div className="search-box">
-          <img src="/src/assets/search.svg" alt="Search" />
+          <img src={search} alt="Search" />
           <input
             type="text"
             placeholder="Search here..."
@@ -406,7 +407,7 @@ const Leads = () => {
                 </>
               ) : (
                 <>
-                  <div className="upload-icon"><img src="/src/assets/upload.svg" alt="Upload Icon" /></div>
+                  <div className="upload-icon"><img src={upload} alt="Upload Icon" /></div>
                   <p>Drag your file(s) to start uploading</p>
                   <p className="or-text">OR</p>
                   <label className="browse-btn">

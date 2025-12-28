@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { userAPI } from '../services/api';
+import { search, editIcon, deleteIcon } from '../assets';
 import './Employees.css';
 
 const Employees = () => {
@@ -155,7 +156,7 @@ const Employees = () => {
     <div className="employees-page">
       <div className="search-section">
         <div className="search-box">
-          <img src="/src/assets/search.svg" alt="Search" />
+          <img src={search} alt="Search" />
           <input
             type="text"
             placeholder="Search here..."
@@ -243,10 +244,10 @@ const Employees = () => {
                     {openMenuId === employee._id && (
                       <div className="dropdown-menu">
                         <button onClick={() => { handleEditEmployee(employee); setOpenMenuId(null); }}>
-                          <img src="/src/assets/edit.svg" alt="Edit" className="icon" /> Edit
+                          <img src={editIcon} alt="Edit" className="icon" /> Edit
                         </button>
                         <button onClick={() => { handleDeleteOne(employee._id); setOpenMenuId(null); }}>
-                          <img src="/src/assets/delete.svg" alt="Delete" className="icon" /> Delete
+                          <img src={deleteIcon} alt="Delete" className="icon" /> Delete
                         </button>
                       </div>
                     )}

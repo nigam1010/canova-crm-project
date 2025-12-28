@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { dashboardAPI, activityAPI } from '../services/api';
+import { search, unassignedLeads, assignedLeads, activeSales, conversionRate } from '../assets';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -188,7 +189,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <div className="search-section">
         <div className="search-box">
-          <img src="/src/assets/search.svg" alt="Search" />
+          <img src={search} alt="Search" />
           <input
             type="text"
             placeholder="Search here..."
@@ -207,7 +208,7 @@ const Dashboard = () => {
           <div className="metrics-left">
             <div className="metric-card">
               <div className="metric-icon">
-                <img src="/src/assets/unassignedleads.svg" alt="Unassigned Leads" />
+                <img src={unassignedLeads} alt="Unassigned Leads" />
               </div>
               <div className="metric-info">
                 <div className="metric-label">Unassigned Leads</div>
@@ -217,7 +218,7 @@ const Dashboard = () => {
 
             <div className="metric-card">
               <div className="metric-icon">
-                <img src="/src/assets/assignedleads.svg" alt="Assigned This Week" />
+                <img src={assignedLeads} alt="Assigned This Week" />
               </div>
               <div className="metric-info">
                 <div className="metric-label">Assigned This Week</div>
@@ -227,7 +228,7 @@ const Dashboard = () => {
 
             <div className="metric-card">
               <div className="metric-icon">
-                <img src="/src/assets/activesales.svg" alt="Active Salespeople" />
+                <img src={activeSales} alt="Active Salespeople" />
               </div>
               <div className="metric-info">
                 <div className="metric-label">Active Salespeople</div>
@@ -238,7 +239,7 @@ const Dashboard = () => {
 
           <div className="metric-card">
             <div className="metric-icon">
-              <img src="/src/assets/conversionrate.svg" alt="Conversion Rate" />
+              <img src={conversionRate} alt="Conversion Rate" />
             </div>
             <div className="metric-info">
               <div className="metric-label">Conversion Rate</div>
