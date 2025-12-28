@@ -1,10 +1,19 @@
-# CanovaCRM - Complete Setup Summary
+# CanovaCRM 
+## Deployment links: 
+# Frontend - Vercel (Unified): https://canova-crm-project.vercel.app
+# Backend - Render : https://canova-crm-project-backend.onrender.com (https://canova-crm-project-backend.onrender.com/api/health)
 
 ## ✅ ONE UNIFIED APPLICATION
-
+Note to Evaluator:
+"This project uses a Unified Micro-Frontend architecture. Please log in with the provided Admin credentials to see the Admin Interface, or Employee credentials to see the User Interface."
 This is a single React application that shows different interfaces based on user role:
 - **Admin** → Desktop dashboard (full screen)
+- Email: admin@canovacrm.com
+- Password: admin@canovacrm.com
 - **Employee** → Mobile-optimized interface (max 430px width)
+- Use any created employee email (In admin interface choose any user email Id)
+- Password: same as email (default)
+- → Shows mobile interface
 
 ## Project Structure
 
