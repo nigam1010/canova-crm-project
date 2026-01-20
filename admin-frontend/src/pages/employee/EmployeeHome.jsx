@@ -335,7 +335,6 @@ const EmployeeHome = () => {
                   onClickAction = handleCheckIn;
                   if (curH >= 9) {
                     btnClass += ' btn-red'; // Late -> Red
-                    isDisabled = true;
                   } else {
                     btnClass += ' btn-green'; // On time -> Green
                   }
