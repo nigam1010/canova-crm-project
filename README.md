@@ -1,4 +1,5 @@
 # CanovaCRM 
+Full-stack CRM platform using MERN to manage customer data, track interactions, and streamline sales workflows with an intuitive and user-friendly interface
 ## Deployment links: 
   Frontend - Vercel (Unified): https://canova-crm-project.vercel.app
   Backend - Render : https://canova-crm-project-backend.onrender.com (https://canova-crm-project-backend.onrender.com/api/health)
